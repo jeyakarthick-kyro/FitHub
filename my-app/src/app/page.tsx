@@ -166,7 +166,11 @@ export default function Home() {
           </Toolbar>
         </AppBar>
         <Image
+<<<<<<< Updated upstream
           src="/bgimage.jpg"
+=======
+          src="/bgimage.webp"
+>>>>>>> Stashed changes
           alt="Workout image"
           layout="fill"
           objectFit="cover"
