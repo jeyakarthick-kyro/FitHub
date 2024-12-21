@@ -166,7 +166,7 @@ export default function Home() {
           </Toolbar>
         </AppBar>
         <Image
-          src="/bgimage.jpg"
+          src="/bgimage.webp"
           alt="Workout image"
           layout="fill"
           objectFit="cover"
