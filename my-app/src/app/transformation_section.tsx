@@ -18,6 +18,7 @@ const TransformationSection = () => {
         position: "relative",
       }}
     >
+      {/* @ts-expect-error Server Component */}
       <Carousel
         infiniteLoop
         showArrows
