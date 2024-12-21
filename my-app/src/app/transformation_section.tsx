@@ -1,69 +1,65 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import { Carousel } from "react-responsive-carousel";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/bundle";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Box } from "@mui/material";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const TransformationSection = () => {
   return (
-    <Box
-      sx={{
-        width: "100%",
-        height: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-        backgroundColor: "#000",
-        color: "#fff",
-        position: "relative",
-      }}
-    >
-      {/* @ts-expect-error Server Component */}
-      <Carousel
-        infiniteLoop
-        showArrows
-        showThumbs={false}
-        showStatus={false}
-        autoPlay
-        interval={3000}
+    <Box sx={{ pt: 10, pb: 8, backgroundColor: "black" }}>
+      <Swiper
+        modules={[Autoplay, Navigation, Pagination]}
+        spaceBetween={0}
+        slidesPerView={1}
+        loop={true}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        navigation
+        pagination={{
+          clickable: true,
+        }}
       >
-        <div>
+        <SwiperSlide>
           <img
             src="/carousel1.png"
             alt="Image 1"
             style={{
               width: "100%",
-              height: "690px",
+              height: "660px",
               objectFit: "cover",
               transform: "scale(1.1)",
             }}
           />
-        </div>
-        <div>
+        </SwiperSlide>
+        <SwiperSlide>
           <img
             src="carousel2.png"
             alt="Image 2"
             style={{
               width: "100%",
-              height: "690px",
+              height: "660px",
               objectFit: "cover",
               transform: "scale(1.1)",
             }}
           />
-        </div>
-        <div>
+        </SwiperSlide>
+        <SwiperSlide>
           <img
             src="carousel3.png"
             alt="Image 3"
             style={{
               width: "100%",
-              height: "690px",
+              height: "660px",
               objectFit: "cover",
               transform: "scale(1.1)",
             }}
           />
-        </div>
-      </Carousel>
+        </SwiperSlide>
+      </Swiper>
     </Box>
   );
 };
